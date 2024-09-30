@@ -1,0 +1,18 @@
+services:
+  webapp:
+    build:
+      context: ./webapp
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - CITY_API_KEY=4fff004844msh053d622e7bbb085p17879ejsn472b288fd45c
+      - WEATHER_API_KEY=f9796e1782c1b7ed31ef1a76e22f414b
+

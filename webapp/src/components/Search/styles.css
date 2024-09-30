@@ -1,0 +1,28 @@
+.search-container {
+
+  input {
+    border: 2px solid white;
+    outline: none;
+    transition: border 0.35s;
+  }
+
+  input:focus,
+  input:hover {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(90deg, rgba(255, 250, 0, 1) 0%, rgba(255, 100, 0, 1) 45%, rgba(5, 23, 145, 1) 100%) border-box;
+  }
+
+  .search-items {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(90deg, rgba(255, 100, 0, 1) 0%, rgba(5, 23, 145, 1) 100%) border-box;
+  }
+
+  .pin {
+    svg path {
+      stroke: var(--grey);
+    }
+  }
+
+}

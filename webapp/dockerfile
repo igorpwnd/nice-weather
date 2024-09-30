@@ -1,0 +1,17 @@
+FROM node:18 AS builder
+
+WORKDIR /app
+
+COPY ./ ./webapp
+
+WORKDIR /app/webapp
+RUN yarn install
+RUN yarn run build
+
+FROM nginx:alpine
+
+COPY --from=builder /app/webapp/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

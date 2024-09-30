@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "type": "module",
+  "scripts": {
+    "weather:run": "bun --hot run ./src/main.ts",
+    "weather:build": "bun build --entrypoints ./src/main.ts --outdir ./dist --target node"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  }
+}

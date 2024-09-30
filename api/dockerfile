@@ -1,0 +1,16 @@
+FROM oven/bun:latest AS builder
+
+WORKDIR /app
+
+COPY ./ ./api
+
+WORKDIR /app/api
+
+RUN bun install
+RUN bun weather:build
+
+WORKDIR /app/api/dist
+
+EXPOSE 3000
+
+CMD ["bun", "run", "main.js"]
