@@ -23,9 +23,6 @@ const WEATHER_BASE = "http://api.openweathermap.org/data/2.5/weather";
 routes.get("/weather", async (req, res) => {
     const { city, lat, lon, units = 'metric' } = req.query;
 
-    console.log(city, lat, lon);
-
-
     try {
         const queryParams = city ? `q=${city}` : `lat=${lat}&lon=${lon}`;
 

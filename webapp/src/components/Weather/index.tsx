@@ -1,18 +1,18 @@
 import getUnicodeFlagIcon from 'country-flag-icons/unicode';
 
-
 import { useCity } from "../../stores/cities"
 import { useWeather } from "../../stores/weather"
+import { WEATHER_LITERAL } from '../utils/literal';
+
+
 
 const Weather = () => {
-  const { data } = useWeather()
   const { selectedCity } = useCity()
-
-
+  const { data } = useWeather()
 
   return <>
     {selectedCity && data &&
-      <section className="mt-12">
+      <section className="mt-8">
         <h1 className="text-[4rem] font-black">{selectedCity.city} </h1>
 
         <div className="w-full bg-[#65b3ef] flex items-center justify-end rounded-[10px]">
@@ -30,7 +30,7 @@ const Weather = () => {
 
           {data.weather[0] &&
             <div className="flex text-left flex-col justify-end pl-8 border-l-[var(--grey)] border-l border-solid">
-              <p className="capitalize">{data.weather[0].description}</p>
+              <p className="capitalize">{WEATHER_LITERAL[data.weather[0].icon]} {data.weather[0].description}</p>
               <p>{data.weather[0].icon.includes('d') ? '☀️ Day' : '🌙 Night'}</p>
               <p>💦 {data.main.humidity}%</p>
               <p>💨 {data.wind.speed} kph</p>

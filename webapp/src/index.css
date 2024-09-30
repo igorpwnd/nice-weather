@@ -8,18 +8,6 @@
   --bg-grey: #eeeeee;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-body {
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box;
-}
-
 html,
 body {
   height: 100%;

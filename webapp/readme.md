@@ -49,6 +49,7 @@ In this project, several improvements have been implemented to enhance code qual
 - **ESLint**: Added for identifying and fixing problems in JavaScript code, ensuring adherence to best practices.
 - **Git Hooks**: Utilized to enforce quality gates, allowing for checks before commits and pushes.
 - **Aliases**: Implemented to simplify and fix import statements, improving the readability and structure of the code.
+-- **Test**: I was going to implement tests with @testing-library + vitest, but got short on time.
 
 These enhancements contribute to a cleaner and more efficient development experience.
 
